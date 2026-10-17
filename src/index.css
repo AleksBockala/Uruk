@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Cinzel', Georgia, serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom Range Input for Sunset & Activity Controls */
+input[type="range"].uruk-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"].uruk-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f59e0b 0%, #ea580c 55%, #7c2d12 100%);
+  border: 1px solid rgba(251, 191, 36, 0.25);
+}
+
+input[type="range"].uruk-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fde68a;
+  border: 2px solid #b45309;
+  margin-top: -6px;
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.7);
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].uruk-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
